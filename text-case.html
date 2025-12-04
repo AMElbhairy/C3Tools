@@ -176,16 +176,16 @@
       border-left: 4px solid var(--white);
     }
 
-    /* Responsive iframe container for embeds */
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%; /* 16:9 */
-      height: 0;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-      background: #000;
-    }
+.video-wrapper {
+  position: relative;
+  width: 600px;       /* ← change this to any size you want */
+  height: 337px;      /* 16:9 ratio (600 × 0.5625) */
+  margin: 0 auto;     /* center on page */
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000;
+}
+
 
     .video-wrapper iframe,
     .video-wrapper video {
@@ -354,4 +354,5 @@
   </footer>
 </body>
 </html>
+
 
