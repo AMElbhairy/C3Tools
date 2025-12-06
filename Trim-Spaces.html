@@ -179,6 +179,39 @@
       padding: 15px;
       font-size: 14px;
     }
+    .video-wrapper {
+  position: relative;
+  width: 900px;       /* ← change this to any size you want */
+  height: 506.25px;      /* 16:9 ratio (600 × 0.5625) */
+  margin: 0 auto;     /* center on page */
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000;
+}
+
+
+    .video-wrapper iframe,
+    .video-wrapper video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Small-screen adjustments */
+    @media (max-width: 900px) {
+      nav {
+        display: none; /* if you want to convert to a responsive nav later */
+      }
+      .header-container img {
+        height: 80px;
+      }
+      main {
+        padding: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -209,7 +242,6 @@
       <a href="Color-Setting.html"><img src="icons/Color.png" alt="Color Setting Icon" />Color Setting</a>
       <a href="Import-XER.html" ><img src="icons/ImportXER.png" alt="IMPORT XER Icon" />Import XER</a>
       <a href="Export-XER.html" ><img src="icons/ExportXER.png" alt="Export XER Icon" />Export XER</a>
-      <a href="Resource-Generation.html" ><img src="icons/ResourceGeneration.png" alt="Resource Generation Icon" />Resource Generation</a>
       <a href="AI-Assistant.html" ><img src="icons/AI%20Assistant.png" alt="AI Assistant Icon" />AI Assistant</a>
     </nav>
 
@@ -247,6 +279,34 @@
           </tbody>
         </table>
       </section>
+
+      <!-- Embedded YouTube tutorial (privacy-enhanced + max-width 600px) -->
+<section>
+  <h2>Tutorial Video</h2>
+  <p>This video demonstrates the Text Trim feature in action.</p>
+
+  <div style="max-width:600px; margin:0 auto;">
+    <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:10px; background:#000;">
+      <iframe
+        src="https://www.youtube.com/embed/X6dFIRwoC7k"
+        title="Text Trim - Tutorial"
+        style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <p style="margin-top:8px; font-size:14px; text-align:center;">
+      Can't view the player? <a href="https://youtu.be/X6dFIRwoC7k" target="_blank" rel="noopener">Open the video on YouTube</a>.
+    </p>
+  </div>
+</section>
+
+
+      
 
       <section>
         <h2>How to Use</h2>
@@ -310,3 +370,4 @@
   
 </body>
 </html>
+
